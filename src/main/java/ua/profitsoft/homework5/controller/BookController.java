@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import lombok.RequiredArgsConstructor;
 import java.util.List;
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.validation.BindingResult;
 import org.springframework.http.HttpStatus;
 import javax.validation.Valid;
-import ua.profitsoft.hw5.dto.BookDto;
-import ua.profitsoft.hw5.dto.AuthorGenreQueryDto;
-import ua.profitsoft.hw5.dto.RestResponse;
-import ua.profitsoft.hw5.service.BookService;
-import static ua.profitsoft.hw5.controller.GlobalExceptionHandler.returnErrorsToClient;
+import ua.profitsoft.homework5.dto.BookDto;
+import ua.profitsoft.homework5.dto.AuthorGenreQueryDto;
+import ua.profitsoft.homework5.dto.RestResponse;
+import ua.profitsoft.homework5.service.BookService;
+import static ua.profitsoft.homework5.controller.GlobalExceptionHandler.returnErrorsToClient;
 
 @RestController
 @RequestMapping("/api/books")

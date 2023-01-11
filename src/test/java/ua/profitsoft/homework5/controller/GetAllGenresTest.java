@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

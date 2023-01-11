@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;

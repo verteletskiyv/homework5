@@ -1,9 +1,9 @@
-package ua.profitsoft.hw5.service;
+package ua.profitsoft.homework5.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ua.profitsoft.hw5.dto.GenreDto;
-import ua.profitsoft.hw5.repo.GenreRepository;
+import ua.profitsoft.homework5.dto.GenreDto;
+import ua.profitsoft.homework5.repo.GenreRepository;
 import java.util.List;
 
 @Service

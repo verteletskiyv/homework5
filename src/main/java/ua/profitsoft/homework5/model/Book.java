@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.model;
+package ua.profitsoft.homework5.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

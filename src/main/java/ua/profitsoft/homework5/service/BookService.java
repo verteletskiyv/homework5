@@ -1,7 +1,7 @@
-package ua.profitsoft.hw5.service;
+package ua.profitsoft.homework5.service;
 
-import ua.profitsoft.hw5.dto.BookDto;
-import ua.profitsoft.hw5.dto.AuthorGenreQueryDto;
+import ua.profitsoft.homework5.dto.BookDto;
+import ua.profitsoft.homework5.dto.AuthorGenreQueryDto;
 import java.util.List;
 
 public interface BookService {

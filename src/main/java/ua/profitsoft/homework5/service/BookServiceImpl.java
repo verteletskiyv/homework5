@@ -1,16 +1,16 @@
-package ua.profitsoft.hw5.service;
+package ua.profitsoft.homework5.service;
 
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ua.profitsoft.hw5.dto.BookDto;
-import ua.profitsoft.hw5.dto.AuthorGenreQueryDto;
-import ua.profitsoft.hw5.model.Book;
-import ua.profitsoft.hw5.repo.BookRepository;
-import ua.profitsoft.hw5.repo.GenreRepository;
-import ua.profitsoft.hw5.exceptions.BookNotFoundException;
+import ua.profitsoft.homework5.dto.BookDto;
+import ua.profitsoft.homework5.dto.AuthorGenreQueryDto;
+import ua.profitsoft.homework5.model.Book;
+import ua.profitsoft.homework5.repo.BookRepository;
+import ua.profitsoft.homework5.repo.GenreRepository;
+import ua.profitsoft.homework5.exceptions.BookNotFoundException;
 import java.util.List;
 
 @Service

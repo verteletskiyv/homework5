@@ -1,13 +1,13 @@
-DROP DATABASE IF EXISTS hw5;
+DROP DATABASE IF EXISTS hw5_verteletskiy;
 DROP DATABASE IF EXISTS hw5test;
 
-CREATE DATABASE hw5
+CREATE DATABASE hw5_verteletskiy
     COLLATE utf8mb4_unicode_ci;
 
 CREATE DATABASE hw5test
     COLLATE utf8mb4_unicode_ci;
 
-USE hw5;
+USE hw5_verteletskiy;
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 

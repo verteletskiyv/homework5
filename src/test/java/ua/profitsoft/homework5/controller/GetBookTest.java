@@ -1,13 +1,13 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MvcResult;
-import ua.profitsoft.hw5.dto.BookDto;
+import ua.profitsoft.homework5.dto.BookDto;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static ua.profitsoft.hw5.controller.utils.JsonParser.parseBookResponse;
+import static ua.profitsoft.homework5.controller.utils.JsonParser.parseBookResponse;
 
 @SpringBootTest
 public class GetBookTest extends AbstractTest {

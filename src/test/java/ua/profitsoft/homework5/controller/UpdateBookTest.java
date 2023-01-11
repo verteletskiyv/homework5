@@ -1,14 +1,14 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MvcResult;
-import ua.profitsoft.hw5.controller.utils.TestsHelper;
+import ua.profitsoft.homework5.controller.utils.TestsHelper;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static ua.profitsoft.hw5.controller.utils.JsonParser.parseResponse;
+import static ua.profitsoft.homework5.controller.utils.JsonParser.parseResponse;
 
 @SpringBootTest
 public class UpdateBookTest extends AbstractTest {

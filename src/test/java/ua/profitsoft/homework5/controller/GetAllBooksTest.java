@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MvcResult;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static ua.profitsoft.hw5.controller.utils.JsonParser.parseBookArrayResponse;
+import static ua.profitsoft.homework5.controller.utils.JsonParser.parseBookArrayResponse;
 
 @SpringBootTest
 public class GetAllBooksTest extends AbstractTest {

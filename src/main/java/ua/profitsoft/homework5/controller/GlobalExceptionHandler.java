@@ -1,13 +1,13 @@
-package ua.profitsoft.hw5.controller;
+package ua.profitsoft.homework5.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ua.profitsoft.hw5.exceptions.ValidationException;
-import ua.profitsoft.hw5.exceptions.BookNotFoundException;
-import ua.profitsoft.hw5.dto.RestResponse;
+import ua.profitsoft.homework5.exceptions.ValidationException;
+import ua.profitsoft.homework5.exceptions.BookNotFoundException;
+import ua.profitsoft.homework5.dto.RestResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

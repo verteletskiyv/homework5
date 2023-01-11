@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.controller.utils;
+package ua.profitsoft.homework5.controller.utils;
 
 public class TestsHelper {
     public static final String NORMAL_JSON =

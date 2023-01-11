@@ -1,4 +1,4 @@
-package ua.profitsoft.hw5.exceptions;
+package ua.profitsoft.homework5.exceptions;
 
 public class ValidationException extends RuntimeException {
     public ValidationException(String message) {
