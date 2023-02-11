@@ -5,6 +5,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import ua.profitsoft.homework5.dto.BookCreateUpdateDto;
 import ua.profitsoft.homework5.dto.BookDto;
 import ua.profitsoft.homework5.dto.AuthorGenreQueryDto;
 import ua.profitsoft.homework5.model.Book;
@@ -31,13 +32,13 @@ public class BookServiceImpl implements BookService {
     }
 
     @Transactional
-    public long create(BookDto bookDto) {
+    public long create(BookCreateUpdateDto bookDto) {
         Book book = bookRepository.saveAndFlush(convertToBook(bookDto));
         return book.getId();
     }
 
     @Transactional
-    public void update(long id, BookDto dto) {
+    public void update(long id, BookCreateUpdateDto dto) {
         Book book = bookRepository.findById(id).orElseThrow(BookNotFoundException::new);
         book.setTitle(dto.getTitle());
         book.setAuthor(dto.getAuthor());
@@ -47,14 +48,11 @@ public class BookServiceImpl implements BookService {
     }
 
     public List<BookDto> search(AuthorGenreQueryDto query) {
-        List<Book> allByAuthorAndGenre = bookRepository.findAllByAuthorLikeAndGenreOrderById(
+        return bookRepository.findAllByAuthorLikeAndGenreOrderById(
                 query.getAuthor(),
                 genreRepository.findGenreByName(query.getGenre()),
-                PageRequest.of(query.getPageNumber(), query.getPageSize()));
-        if (allByAuthorAndGenre.isEmpty())
-            throw new BookNotFoundException();
-
-        return allByAuthorAndGenre.stream().map(this::convertToBookDto).toList();
+                PageRequest.of(query.getPageNumber(), query.getPageSize()))
+                .stream().map(this::convertToBookDto).toList();
     }
 
     @Transactional
@@ -72,7 +70,7 @@ public class BookServiceImpl implements BookService {
         return dto;
     }
 
-    private Book convertToBook(BookDto dto) {
+    private Book convertToBook(BookCreateUpdateDto dto) {
         Book book = modelMapper.map(dto, Book.class);
         book.setGenre(genreRepository.findGenreByName(dto.getGenre()));
         return book;

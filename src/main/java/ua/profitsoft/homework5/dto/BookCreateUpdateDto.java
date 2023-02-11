@@ -2,15 +2,11 @@ package ua.profitsoft.homework5.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import javax.validation.constraints.Size;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
+
+import javax.validation.constraints.*;
 
 @Getter @Setter
-public class BookDto {
-    private Long id;
+public class BookCreateUpdateDto {
     @Size(min = 1, max = 100, message = "Title should be between 1 and 100 characters")
     @NotEmpty
     private String title;

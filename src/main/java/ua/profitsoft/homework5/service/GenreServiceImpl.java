@@ -15,9 +15,7 @@ public class GenreServiceImpl implements GenreService {
         return genreRepository.findAll().stream()
                 .map(genre -> GenreDto.builder()
                         .name(genre.getName())
-                        .books(genre.getBooks().stream()
-                                .map(b -> b.getTitle() + ", " + b.getYearWritten())
-                                .toList()).build())
+                        .build())
                 .toList();
     }
 }

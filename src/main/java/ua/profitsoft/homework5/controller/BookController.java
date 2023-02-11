@@ -2,18 +2,13 @@ package ua.profitsoft.homework5.controller;
 
 import lombok.RequiredArgsConstructor;
 import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RequestBody;
+
+import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.http.HttpStatus;
 import javax.validation.Valid;
+
+import ua.profitsoft.homework5.dto.BookCreateUpdateDto;
 import ua.profitsoft.homework5.dto.BookDto;
 import ua.profitsoft.homework5.dto.AuthorGenreQueryDto;
 import ua.profitsoft.homework5.dto.RestResponse;
@@ -21,6 +16,7 @@ import ua.profitsoft.homework5.service.BookService;
 import static ua.profitsoft.homework5.controller.GlobalExceptionHandler.returnErrorsToClient;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/books")
 @RequiredArgsConstructor
 public class BookController {
@@ -38,17 +34,17 @@ public class BookController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public RestResponse addBook(@Valid @RequestBody BookDto bookDto, BindingResult bindingResult) {
+    public RestResponse addBook(@Valid @RequestBody BookCreateUpdateDto dto, BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             returnErrorsToClient(bindingResult);
 
-        long createdId = bookService.create(bookDto);
+        long createdId = bookService.create(dto);
         return new RestResponse("Created a new book with id %d".formatted(createdId));
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public RestResponse updateBook(@PathVariable long id, @Valid @RequestBody BookDto dto,
+    public RestResponse updateBook(@PathVariable long id, @Valid @RequestBody BookCreateUpdateDto dto,
                                    BindingResult bindingResult) {
         if (bindingResult.hasErrors())
             returnErrorsToClient(bindingResult);
